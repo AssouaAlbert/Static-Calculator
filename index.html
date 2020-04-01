@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Layout</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #232020;
+  display: flex;
+  justify-content: center;
+  font-family: "Gotu", san-serif;
+}
+.container {
+  font-weight: 700;
+  width: 40%;
+  min-height: 100%;
+  border: 5px solid brown;
+  background-color: rgba(65, 64, 63, 0.5);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 350px 100px;
+  border-top-left-radius: 350px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: #fefefe;
+  border: solid 5px #41403e;
+  width: 90%;
+  height: 150px;
+  margin-top: 10px;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.output {
+  padding: 5px;
+  font-size: 2em;
+  overflow: auto;
+  height: 2em;
+}
+button {
+  font-weight: 700;
+  width: 75px;
+  height: 75px;
+  margin: 5px 0px;
+  border-radius: 50px 50px;
+  border: none;
+  box-shadow: 0 3px 2px 4px rgba(92, 92, 92, 0.3);
+  transition: all 0.05s;
+  transition-timing-function: linear;
+}
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 2px 4px rgba(255, 255, 255, 0.3);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.controlbtns {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.controlbtns button:not(.onbtn) {
+  background-color: black;
+  color: white;
+}
+.onbtn {
+  background-color: red;
+  color: white;
+}
+.math {
+  background-color: blue;
+  color: white;
+}
+.math-btn {
+  display: flex;
+  width: 100%;
+}
+.number-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+}
+.number-btn div {
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.enter {
+  flex-grow: 2;
+}
+.enter button {
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="results">
+          <p class="output">
+            <span>3000</span>
+            <span>*</span>
+            <span>sin(60)</span>
+            <span>+</span>
+            <span>cos(45)</span>
+          </p>
+        </div>
+        <div class="main">
+          <div class="controlbtns">
+            <button>
+              M+
+            </button>
+            <button>
+              M-
+            </button>
+            <button>
+              M
+            </button>
+            <button class="onbtn">
+              AC
+            </button>
+          </div>
+          <div class="math-btn">
+            <div class="number-btn">
+              <div><button>7</button></div>
+              <div><button>8</button></div>
+              <div><button>9</button></div>
+              <div><button class="multi math">x</button></div>
+              <div><button>4</button></div>
+              <div><button>5</button></div>
+              <div><button>6</button></div>
+              <div><button class="sub math">-</button></div>
+              <div><button>3</button></div>
+              <div><button>2</button></div>
+              <div><button>1</button></div>
+              <div><button class="add math">+</button></div>
+              <div><button>0</button></div>
+              <div class="enter"><button>Enter</button></div>
+              <div><button class="add math">/</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
